@@ -5,6 +5,8 @@ import (
 	"sync"
 )
 
+type Dialer func(int32) (Connection, error)
+
 type Pool struct {
 	dialer Dialer
 
